@@ -1,0 +1,19 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Education GPT for Education ",
+    "name_for_model": "education_gpt",
+    "description_for_human": "Plugin for the education specific information",
+    "description_for_model": "Plugin for the education specific information",
+    "auth": {
+      "type": "none"
+    },
+    "api": {
+      "type": "openapi",
+      "url": "http://localhost:5000/.well-known/openapi.yaml",
+      "is_user_authenticated": false
+    },
+    "logo_url": "http://localhost:5000/.well-known/logo.png",
+    "contact_email": "support@example.com",
+    "legal_info_url": "http://www.example.com/legal"
+  }
+  

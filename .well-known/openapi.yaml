@@ -1,0 +1,46 @@
+openapi: 3.0.0
+info:
+  title: Edu GPT
+  description: This is a simple API for a Education Information Retrival Plugin.
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000/
+paths:
+  /process_question:
+    post:
+      summary: Process a question
+      operationId: processQuestion
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                question:
+                  type: string
+      responses:
+        '200':
+          description: A JSON object containing the answer
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  answer:
+                    type: string
+  /.well-known/ai-plugin.json:
+    get:
+      summary: Serve the AI plugin manifest file
+      operationId: getAiPluginManifest
+      responses:
+        '200':
+          description: The AI plugin manifest file
+  /.well-known/openapi.yaml:
+    get:
+      summary: Serve the OpenAPI specification file
+      operationId: getOpenApiSpecification
+      responses:
+        '200':
+          description: The OpenAPI specification file
+ 
